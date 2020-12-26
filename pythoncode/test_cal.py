@@ -18,9 +18,6 @@ def get_data_work():
         return [add_datas, sub_datas, mul_datas, div_datas, addmyids,submyids,mulmyids,devmyids]
 class TestCalc:
     @classmethod
-    def setup_class(self):
-        print("开始全部计算")
-    @classmethod
     def teardown_class(self):
         print("结束全部计算")
 
@@ -31,6 +28,7 @@ class TestCalc:
         print("结束计算")
 
     def setup_class(self):
+        print("开始全部计算")
         self.calc=Calcultor()
     #加法
 
