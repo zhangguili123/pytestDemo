@@ -8,8 +8,11 @@ class BasePage():
     def find(self,locator):
         return self.driver.find_element(*locator)
 
-    def find_and_click(self,locator):
+    def find_and_click1(self,locator):
          self.find(locator).click()
+
+    def find_and_click(self, locator):
+        self.find(locator).click()
 
     def find_and_sendkey(self,locator,text):
           self.find(locator).send_keys(text)

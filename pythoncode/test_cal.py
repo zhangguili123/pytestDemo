@@ -31,10 +31,9 @@ class TestCalc:
         print("开始全部计算")
         self.calc=Calcultor()
     #加法
-
     @pytest.mark.parametrize("a,b,expect",get_data_work()[0],ids=get_data_work()[4])
     def test_add(self,a,b,expect):
-        result=self.calc.add(a,b)
+        result = self.calc.add(a, b)
         assert  result==expect
 
     #减法

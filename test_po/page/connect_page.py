@@ -23,13 +23,14 @@ class connectPage(BasePage):
         #ul=self.find(By.ID,"1688851974906588_anchor")
         #newparts=self.find(By.XPATH,"//*[@id='js_contacts51']/div/div[1]/div/div[2]/div[2]/ul/li")
         sleep(3)
-        newparts = self.driver.find_elements_by_xpath('//ul[@role="group"] //li')
+        #newparts = self.driver.find_elements_by_xpath('//ul[@role="group"] //li')
+        newparts = self.driver.find_elements_by_xpath("//*[@id='js_contacts12']/div/div[1]/div/div[2]/div[2]/ul/li")
         part_list=[]
         for newpart in  newparts:
             newpart = newpart.text.strip()
             part_list.append(newpart)
         return  part_list
 
-        print("part_list===" + part_list)
+
 
 
